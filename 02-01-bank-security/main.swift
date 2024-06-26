@@ -48,7 +48,7 @@ print("__________________Aufgabe 3.4 ______________________")
 
 // 5 EUR Gebühr
 var kntGebuehr: Double = 5.0
-kontoStatusTuple.KntValue += kntGebuehr
+kontoStatusTuple.KntValue -= kntGebuehr
 print("Kontostand inkl. Gebühren: \(kontoStatusTuple.KntValue)")
 
 // 5% Zinsen
