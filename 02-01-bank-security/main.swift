@@ -93,8 +93,76 @@ print(decryptTransaktionText)
 // 4.4 Gültigkeit der Überwesiung
 print("__________________Aufgabe 4.4 ______________________")
 
+func pruefeInhalt(){
+    if decryptTransaktionText.count > 0 {
+        print(">>> Entschlüsselte Nachricht ist gültig.")
+    }
+    else {
+            print(">>> Entschlüsselte Nachricht ist ungültig da sie keinen Inhalt hat")
+    }
+}
+
+func pruefeLaenge(){
+    if decryptTransaktionText.count <=  400 {
+        print(">>> Entschlüsselte Nachricht ist nicht zulange! Sie hat aktuell \(decryptTransaktionText.count) Zeichen")
+    }
+    else {
+            print(">>> Entschlüsselte Nachricht ist länger als 400 Zeichen!")
+    }
+}
+
+func verifMessage() {
+    
+    if decryptTransaktionText.contains(String(Betrag))
+    {
+        print("Betrag ist gültig")
+        if decryptTransaktionText.contains(String(kontoNr))
+        {
+            print("Kontonummer ist gültig")
+            if decryptTransaktionText.contains(String(iban))
+                
+            {
+                print("IBAN ist gültig")
+                if decryptTransaktionText.contains(String(kompleteName))
+                {
+                    print("Kontoinhaber ist gültig")
+                }
+            }
+        }
+        
+    }
+   
+    
+}
+
+
+
+pruefeInhalt()
+pruefeLaenge()
+verifMessage()
+
 
 
 // 4.5 Erweitere Verschlüsselung
 print("__________________Aufgabe 4.5 ______________________")
 
+func crypt() {
+    
+    
+    let dict = ["1": "4", "2": "6", "0": "3", "9": "5", "a": "j", "g": "k", "w": "b", "h": "u", "t": "p", "l": "d", "f": "r"]
+  
+   
+    var target: Int = 50
+    
+    for (target, dict) in dict {
+        decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: target, with: dict)
+    }
+    
+    print(decryptTransaktionText)
+}
+    
+
+
+crypt()
+    
+    
