@@ -42,3 +42,33 @@ var zeitzone = Calendar.current.timeZone
 
 let unixTimebirthDay: TimeInterval = 1719327763 // Zeit in Sekunden vom 1.1.1970 bis 25.6.24 17:02
 let birthDay = Date(timeIntervalSince1970: unixTimebirthDay)
+
+// 4.1 Überweisung
+
+var waehrung: Character = "€"
+var Betrag: Double = 500.00
+
+var header: String = """
+Überweisung
+Unverschlüsselt
+
+"""
+
+var ueberwMessage: String = """
+
+Name: \(kompleteName)
+
+Bank: \(bankName), \(bankCity)
+Kontonummer: \(kontoNr)
+IBAN: \(iban)
+
+Betrag: \(String(format: "%.2f",Betrag))
+
+Verwendungszweck: Für unsere kommende Islandreise -
+hier ist mein Beitrag zur gemeinsamen Abenteuerkasse,
+damit wir unvergessliche Erlebnisse schaffen können!
+
+"""
+
+var headerAndMessage: String = header + ueberwMessage
+

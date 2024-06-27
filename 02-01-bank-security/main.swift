@@ -66,3 +66,35 @@ var payValue: Double = 123.45
 
 var creditUse = payValue / Double(limitCredit) * 100
 print("Kreditrahmen ausgeschöpft: \(String(format: "%.2f", creditUse)) %")
+
+// 4.1 Überweisung
+print("__________________Aufgabe 4.1 ______________________")
+print(headerAndMessage)
+
+
+// 4.2 Transaktion verschlüsseln
+print("__________________Aufgabe 4.2 ______________________")
+
+var originalTransaktionText: String = ueberwMessage
+var cryptTransaktionText: String = ueberwMessage.replacing("a", with: "😇").replacing("e", with: "😎").replacing("i", with: "👁️").replacing("o", with: "🍄")
+
+print(cryptTransaktionText)
+
+
+
+// 4.3 Transaktion entschlüsseln
+print("__________________Aufgabe 4.3 ______________________")
+
+var decryptTransaktionText: String = ueberwMessage.replacing("😇", with: "a").replacing("😎", with: "e").replacing("👁️", with: "i").replacing("🍄", with: "o")
+
+print(decryptTransaktionText)
+
+
+// 4.4 Gültigkeit der Überwesiung
+print("__________________Aufgabe 4.4 ______________________")
+
+
+
+// 4.5 Erweitere Verschlüsselung
+print("__________________Aufgabe 4.5 ______________________")
+
