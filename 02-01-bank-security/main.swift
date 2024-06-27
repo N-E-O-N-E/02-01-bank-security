@@ -129,18 +129,12 @@ func verifMessage() {
                 }
             }
         }
-        
     }
-   
-    
 }
-
-
 
 pruefeInhalt()
 pruefeLaenge()
 verifMessage()
-
 
 
 // 4.5 Erweitere Verschlüsselung
@@ -148,21 +142,19 @@ print("__________________Aufgabe 4.5 ______________________")
 
 func crypt() {
     
-    
     let dict = ["1": "4", "2": "6", "0": "3", "9": "5", "a": "j", "g": "k", "w": "b", "h": "u", "t": "p", "l": "d", "f": "r"]
   
-   
-    var target: Int = 50
+    var i: Int = 0
     
-    for (target, dict) in dict {
-        decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: target, with: dict)
+    for (i, dict) in dict {
+        decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: i, with: dict)
     }
     
     print(decryptTransaktionText)
 }
-    
-
 
 crypt()
+
+
     
     

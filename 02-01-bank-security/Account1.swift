@@ -43,6 +43,7 @@ var zeitzone = Calendar.current.timeZone
 let unixTimebirthDay: TimeInterval = 1719327763 // Zeit in Sekunden vom 1.1.1970 bis 25.6.24 17:02
 let birthDay = Date(timeIntervalSince1970: unixTimebirthDay)
 
+
 // 4.1 Überweisung
 
 var waehrung: Character = "€"
