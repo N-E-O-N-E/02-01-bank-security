@@ -142,7 +142,7 @@ print("__________________Aufgabe 4.5 ______________________")
 
 func crypt() {
     
-    let dict = ["1": "4", "2": "6", "0": "3", "9": "5", "a": "j", "g": "k", "w": "b", "h": "u", "t": "p", "l": "d", "f": "r"]
+    let dict = ["1": "😀", "2": "😎", "0": "🍄"]
   
     var i: Int = 0
     
@@ -156,5 +156,18 @@ func crypt() {
 crypt()
 
 
+func decrypt() {
     
+    let dict = ["😀": "1", "😎": "2", "🍄": "0"]
+  
+    var i: Int = 0
+    
+    for (i, dict) in dict {
+        decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: i, with: dict)
+    }
+    
+    print(decryptTransaktionText)
+}
+
+decrypt()
     
