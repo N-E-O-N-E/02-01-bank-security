@@ -7,7 +7,7 @@
 
 import Foundation
 
-// 2.1 Nutzerdaten anlegen
+// 2.1 Nutzerdaten anlegen -----------------------------------------------------------------------------------
 
 let kompleteName: String = "Beate Beispiel"
 var age: Int = 39
@@ -18,7 +18,7 @@ var houseNo: Int = 123
 var eMail: String = "beate.beispiel@example.com"
 var phone: String = "+49123456789"
 
-// 2.2 Bank- und Kontodaten
+// 2.2 Bank- und Kontodaten -----------------------------------------------------------------------------------
 
 var bankName: String = "Beispielbank Deutschland"
 var bankCity: String = "Berlin"
@@ -28,13 +28,13 @@ var pin: Int = 1234
 var ktoGesperrt: Bool = false
 var kontostand: Float = 1530.40
 
-// 2.3 KontoMetadaten
+// 2.3 KontoMetadaten -----------------------------------------------------------------------------------
 
 let nutzerID: UInt = 12345678912345678912
 var nutzerBonitaet: UInt = 750
 var letzteAbbuchung: Float = -100.00
 
-// 2.4 ID und Zeitstempel
+// 2.4 ID und Zeitstempel -----------------------------------------------------------------------------------
 
 let uuid = UUID()
 
@@ -44,7 +44,7 @@ let timeInterval = currentDate.timeIntervalSince(startDate)
 let birthDay = Date(timeIntervalSince1970: timeInterval)
 
 
-// 4.1 Überweisung
+// 4.1 Überweisung -----------------------------------------------------------------------------------
 
 var waehrung: Character = "€"
 var Betrag: Double = 500.00

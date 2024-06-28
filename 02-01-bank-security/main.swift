@@ -7,8 +7,8 @@
 
 import Foundation
 
-/*
-// 3.1 Kontoberechnung durchführen
+
+// 3.1 Kontoberechnung durchführen -----------------------------------------------------------------------------------
 print("__________________Aufgabe 3.1 ______________________")
 // Kontostand erhöhen
 kontostand += 250
@@ -21,21 +21,21 @@ kontostand /= 2
 print(kontostand)
 // Modulo auf das Alter durch 2
 var restbetrag = age % 2
-print("Modulo: \(restbetrag)")
-*/
+print("Modulo: \(restbetrag)\n")
 
-/*
-// 3.2 Typen konvertieren Aufgabe
+
+
+// 3.2 Typen konvertieren Aufgabe -----------------------------------------------------------------------------------
 print("__________________Aufgabe 3.2 ______________________")
 var amountInt: Int = 500
 var amountDouble: Double = Double(amountInt)
 var balanceInCent = kontostand * 100
 var acclountNumberString = String(kontoNr)
-print("KontoNr als String: \(acclountNumberString)")
-*/
+print("KontoNr als String: \(acclountNumberString)\n")
 
-/*
-// 3.3 Daten gruppieren
+
+
+// 3.3 Daten gruppieren -----------------------------------------------------------------------------------
 print("__________________Aufgabe 3.3 ______________________")
 
 var kontoStatusTuple: (KntNr: Int, KntValue: Double, KntInhaber: String) = (KntNr: kontoNr, KntValue: Double(kontostand), KntInhaber: kompleteName)
@@ -45,12 +45,12 @@ print("Kontonummer: \(kontoStatusTuple.KntNr)")
 print("Kontostand: \(kontoStatusTuple.KntValue) EUR")
 
 kontoStatusTuple.KntValue = 1000.00
-print("Neuer Kontostand: \(kontoStatusTuple.KntValue) EUR")
-*/
+print("Neuer Kontostand: \(kontoStatusTuple.KntValue) EUR \n")
 
-/*
 
-// 3.4 Kontogebühren & Zinsen
+
+
+// 3.4 Kontogebühren & Zinsen -----------------------------------------------------------------------------------
 print("__________________Aufgabe 3.4 ______________________")
 
 // 5 EUR Gebühr
@@ -63,48 +63,42 @@ var interestRate: Double = 0.05
 var zinsBetrag = kontoStatusTuple.KntValue * interestRate
 print("Zinsbetrag Summe: \(zinsBetrag)")
 kontoStatusTuple.KntValue += zinsBetrag
-print("Kontostand inkl. Zinsbetrag: \(kontoStatusTuple.KntValue)")
-*/
+print("Kontostand inkl. Zinsbetrag: \(kontoStatusTuple.KntValue) \n")
 
-/*
-// 3.5 Kreditrahmen
+
+
+// 3.5 Kreditrahmen -----------------------------------------------------------------------------------
 print("__________________Aufgabe 3.5 ______________________")
 
 var limitCredit: Int = 1000
 var payValue: Double = 123.45
-
 var creditUse = payValue / Double(limitCredit) * 100
-print("Kreditrahmen ausgeschöpft: \(String(format: "%.2f", creditUse)) %")
-*/
+print("Kreditrahmen ausgeschöpft: \(String(format: "%.2f", creditUse)) % \n")
+
  
-/*
-// 4.1 Überweisung
+
+// 4.1 Überweisung -----------------------------------------------------------------------------------
 print("__________________Aufgabe 4.1 ______________________")
 print(headerAndMessage)
-*/
+print("\n")
 
-/*
-// 4.2 Transaktion verschlüsseln
+
+// 4.2 Transaktion verschlüsseln -----------------------------------------------------------------------------------
 print("__________________Aufgabe 4.2 ______________________")
-
 var originalTransaktionText: String = ueberwMessage
 var cryptTransaktionText: String = ueberwMessage.replacing("a", with: "😇").replacing("e", with: "😎").replacing("i", with: "👁️").replacing("o", with: "🍄")
-
 print(cryptTransaktionText)
-*/
+print("\n")
 
-/*
-// 4.3 Transaktion entschlüsseln
+
+// 4.3 Transaktion entschlüsseln -----------------------------------------------------------------------------------
 print("__________________Aufgabe 4.3 ______________________")
-
 var decryptTransaktionText: String = ueberwMessage.replacing("😇", with: "a").replacing("😎", with: "e").replacing("👁️", with: "i").replacing("🍄", with: "o")
-
 print(decryptTransaktionText)
+print("\n")
 
-*/
 
-/*
-// 4.4 Gültigkeit der Überwesiung
+// 4.4 Gültigkeit der Überwesiung -----------------------------------------------------------------------------------
 print("__________________Aufgabe 4.4 ______________________")
 
 func pruefeInhalt(){
@@ -149,11 +143,10 @@ func verifMessage() {
 pruefeInhalt()
 pruefeLaenge()
 verifMessage()
+print("\n")
 
-*/
 
-/*
-// 4.5 Erweitere Verschlüsselung
+// 4.5 Erweitere Verschlüsselung -----------------------------------------------------------------------------------
 print("__________________Aufgabe 4.5 ______________________")
 
 func crypt() {
@@ -167,9 +160,6 @@ func crypt() {
     print(decryptTransaktionText)
 }
 
-crypt()
-
-
 func decrypt() {
     
     let dict = ["😀": "1", "😎": "2", "🍄": "0"]
@@ -179,105 +169,89 @@ func decrypt() {
     }
     
     print(decryptTransaktionText)
+    print("\n")
 }
 
-/*
- 
- print("Eingabe: ")
- var eingabe = readLine()
-
- */
-
-
+crypt()
 decrypt()
 
- */
 
 
-// ------------ Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse -----------------
-print("------------ Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse -------------\n")
+// 5.3 Bonusaufgabe - Weitere Bankkonten und Kontoprozesse -----------------------------------------------------------------------------------
+print("Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse\n")
 
+//Anlegen der Klasse Bankkonto
 class BankKonto {
-    
     var nameDesKontoInhabers: String = ""
     var ibanDesKontos: String = ""
     var pinDesKontos: Int = 0
     var kontoStand: Double = 0.0
-    
 }
 
-var cKonto1 = BankKonto()
-var cKonto2 = BankKonto()
-var Jefferson = BankKonto()
+// Erstellen der Instanzen für 2 Konten
+var quellkonto = BankKonto()
+var zielkonto = BankKonto()
 
-cKonto1.nameDesKontoInhabers = "Rita Schmitt"
-cKonto1.ibanDesKontos = "DE111"
-cKonto1.pinDesKontos = 7777
-cKonto1.kontoStand = 1000
+// Quellkonto
+quellkonto.nameDesKontoInhabers = "Rita Schmitt"
+quellkonto.ibanDesKontos = "DE111"
+quellkonto.pinDesKontos = 1111
+quellkonto.kontoStand = 2500
 
-cKonto2.nameDesKontoInhabers = "Wolfgang Bauer"
-cKonto2.ibanDesKontos = "DE222"
-cKonto2.pinDesKontos = 3333
-cKonto2.kontoStand = 2000
-
-Jefferson.nameDesKontoInhabers = "Jefferson Presna"
-Jefferson.ibanDesKontos = "DE555"
-Jefferson.pinDesKontos = 111
-Jefferson.kontoStand = 3000
+// Zielkonto
+zielkonto.nameDesKontoInhabers = "Wolfgang Bauer"
+zielkonto.ibanDesKontos = "DE222"
+zielkonto.pinDesKontos = 2222
+zielkonto.kontoStand = 3100
 
 
-print("--------------- Überweisung ----------------")
-print("--------------------------------------------\n")
+// Überweisungsprozess
+print("--------- Musterbank - Willkommen ----------")
+print("----------------Überweisung-----------------\n")
 
+// Kunde steckt Karte in Geldautomat
 
-print("Girokarte wurd eingesteckt! Bitte geben Sie ihren PIN ein: \n")
-var checkPIN = Int(readLine()!)!
+print("Girokarte wurd eingesteckt!\nBitte geben Sie ihren 4 stelligen PIN ein: ")
+var checkPIN = Int(readLine()!)! // Pin wird gelesen
 
-cKonto1 = Jefferson
-
-if checkPIN == cKonto1.pinDesKontos {
+if checkPIN == quellkonto.pinDesKontos {
     
-    print("Bitte geb deine IBAN ein: ")
-    let inputVonIBAN = readLine()
+    print("Gib die IBAN des Empfängers ein:  ")
+    let inputZuIBAN = readLine()
     
-    if inputVonIBAN == cKonto1.ibanDesKontos {
+    if inputZuIBAN == zielkonto.ibanDesKontos {
         
-        print("Gib die Ziel-IBAN ein:  ")
-        let inputZuIBAN = readLine()
+        print("Gib den Überweisungsbetrag ein:  ")
+        let betragVonZu = Double(readLine()!)!
         
-        if inputZuIBAN == cKonto2.ibanDesKontos {
+        print("Der Betrag \(betragVonZu) wird jetzt überwieden (y/n): ")
+        let jaNein = readLine()
+        
+        if jaNein == "y" {
             
-            print("Gib den Überweisungsbetrag ein:  ")
-            let betragVonZu = Double(readLine()!)!
+            // Verrechnung des Betrages mit Ausgabe vor und nach der Berechnung
+            print("Kontostand von \(quellkonto.nameDesKontoInhabers) voher: \(String(format: "%.2f", quellkonto.kontoStand)) EUR")
+            print("Kontostand von \(zielkonto.nameDesKontoInhabers) vorher: \(String(format: "%.2f",zielkonto.kontoStand)) EUR\n")
             
-            print("Der Betrag \(betragVonZu) wird jetzt überwieden (y/n): ")
-            let jaNein = readLine()
+            quellkonto.kontoStand -= betragVonZu // Ziehe Betrag von Konto 1 ab
+            zielkonto.kontoStand += betragVonZu // Rechne Betrag auf Konto 2 drauf
             
-            if jaNein == "y" {
-                
-                // Berechnung
-                print("Kontostand von \(cKonto1.nameDesKontoInhabers) voher: \(cKonto1.kontoStand)")
-                print("Kontostand von \(cKonto2.nameDesKontoInhabers) vorher: \(cKonto2.kontoStand) \n")
-                
-                cKonto1.kontoStand -= betragVonZu // Ziehe Betrag von Konto 1 ab
-                cKonto2.kontoStand += betragVonZu // Rechne Betrag auf Konto 2 drauf
-                
-                print("Kontostand von \(cKonto1.nameDesKontoInhabers) nachher: \(cKonto1.kontoStand)")
-                print("Kontostand von \(cKonto2.nameDesKontoInhabers) nachher: \(cKonto2.kontoStand) \n")
-            }
-            
-            else {
-                
-                // Abbruch
-                print(">>>> Überweisungsvorgang abgebrochen! <<<<")
-            }
-
+            print("Kontostand von \(quellkonto.nameDesKontoInhabers) nachher: \(String(format: "%.2f",quellkonto.kontoStand)) EUR")
+            print("Kontostand von \(zielkonto.nameDesKontoInhabers) nachher: \(String(format: "%.2f",zielkonto.kontoStand)) EUR\n")
         }
+        
+        else {
+            
+            // Abbruch
+            print(">>>> Überweisungsvorgang abgebrochen! <<<<")
+        }
+
     }
-}
     
+}
+    // Fehler bei falscher PIN
 else {
-    print("Sie haben den falschen PIN eingegeben!")
+    print("Sie haben den falschen PIN eingegeben!\nBitte entnehmen Sie ihre Karte und versuchen sie es erneut!\n")
 }
 
 
