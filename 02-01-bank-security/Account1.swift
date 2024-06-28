@@ -52,7 +52,6 @@ var Betrag: Double = 500.00
 var header: String = """
 Überweisung
 Unverschlüsselt
-
 """
 
 var ueberwMessage: String = """
