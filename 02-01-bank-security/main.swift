@@ -177,7 +177,9 @@ decrypt()
 
 
 
-// 5.3 Bonusaufgabe - Weitere Bankkonten und Kontoprozesse -----------------------------------------------------------------------------------
+
+
+// 5.3 Bonusaufgabe - Weitere Bankkonten und Kontoprozesse   -----------------------------------------------------------------------------------
 print("Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse\n")
 
 //Anlegen der Klasse Bankkonto
@@ -256,12 +258,61 @@ else {
 
 
 
+// 5.4 Bonus: BMI Rechner ----------------------------------------------------------------------
+print("Bonusaufgabe 5.4 Bonus: BMI Rechner\n")
+
+print("Hallo, wie ist dein Name: ")
+var name = readLine()
+print("Hallo \(name!), schön das du da bist.\nNenne mir dein Gewicht in \"kg\": ")
+var gewicht:Double = Double(readLine()!)!
+print("Nenne mir deine Körpergröße in \"Metern\": ")
+var groesse: Double = Double(readLine()!)!
+var bmiRechnung: Double = gewicht / ( groesse * groesse)
+print("Dein errechneter BMI ist: \(String(format: "%.2f", bmiRechnung))\n")
+ 
+
+
+// 5.5 Bonus: Zahlen raten ----------------------------------------------------------------------
+print("Bonusaufgabe 5.4 Bonus: Zahlen raten\n")
+
+var randomInt: Int = Int.random(in: 0..<10)
+
+print("Hallo, bitte nenne mir deinen Namen: ")
+var nameUser = readLine()
+
+print("Super, vielen Dank \(nameUser!).\nNenne mir eine beliebige zahl zwischen 1 und 10: ")
+var randomUsereingabe = Int(readLine()!)!
+              
+    if randomUsereingabe == randomInt {
+        
+        print("Super, gewonnen!\n")
+    }
+    else {
+        
+        print("Schade, kein Treffer!\n")
+    }
 
 
 
+// 5.6 Bonus: Taschenrechner ------------------------------------------------------------------------#
+print("5.6 Bonus: Taschenrechner\n")
 
+var eingabeZahl1: Int = 0
+var eingabeZahl2: Int = 0
+var divisionSum: Int = 0
+var moduloZahlen: Int = 0
 
+// Eingaben
+print("Hallo, bitte gib deine erste Zahl ein:")
+eingabeZahl1 = Int(readLine()!)!
+print("Bitte gib deine zweite Zahl ein:")
+eingabeZahl2 = Int(readLine()!)!
 
+// Berechnung
+divisionSum = eingabeZahl1 / eingabeZahl2
+moduloZahlen = eingabeZahl1 % eingabeZahl2
+
+print("Ergebnis der Division= \(divisionSum)\nModulo ist: \(moduloZahlen)")
 
 
 
