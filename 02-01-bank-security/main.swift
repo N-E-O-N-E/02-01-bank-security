@@ -144,8 +144,6 @@ func crypt() {
     
     let dict = ["1": "😀", "2": "😎", "0": "🍄"]
   
-    var i: Int = 0
-    
     for (i, dict) in dict {
         decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: i, with: dict)
     }
@@ -159,8 +157,6 @@ crypt()
 func decrypt() {
     
     let dict = ["😀": "1", "😎": "2", "🍄": "0"]
-  
-    var i: Int = 0
     
     for (i, dict) in dict {
         decryptTransaktionText = decryptTransaktionText.replacingOccurrences(of: i, with: dict)
@@ -169,5 +165,8 @@ func decrypt() {
     print(decryptTransaktionText)
 }
 
+//print("Eingabe: ")
+//var eingabe = readLine()
+
 decrypt()
-    
+
