@@ -197,6 +197,14 @@ decrypt()
 // ------------ Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse -----------------
 print("------------ Bonusaufgabe 5.3 - Weitere Bankkonten und Kontoprozesse -------------\n")
 
+class BankKonto {
+    
+    var nameDesKontoInhabers: String = ""
+    var ibanDesKontos: String = ""
+    var pinDesKontos: Int = 0
+    var kontoStand: Double = 0.0
+    
+}
 
 var cKonto1 = BankKonto()
 var cKonto2 = BankKonto()
@@ -212,14 +220,10 @@ cKonto2.ibanDesKontos = "DE222"
 cKonto2.pinDesKontos = 3333
 cKonto2.kontoStand = 2000
 
-Jefferson.nameDesKontoInhabers = "Jefferson"
+Jefferson.nameDesKontoInhabers = "Jefferson Presna"
 Jefferson.ibanDesKontos = "DE555"
 Jefferson.pinDesKontos = 111
 Jefferson.kontoStand = 3000
-
-
-
-
 
 
 print("--------------- Überweisung ----------------")
@@ -234,7 +238,7 @@ cKonto1 = Jefferson
 if checkPIN == cKonto1.pinDesKontos {
     
     print("Bitte geb deine IBAN ein: ")
-    var inputVonIBAN = readLine()
+    let inputVonIBAN = readLine()
     
     if inputVonIBAN == cKonto1.ibanDesKontos {
         
