@@ -39,8 +39,11 @@ var letzteAbbuchung: Float = -100.00
 let uuid = UUID()
 
 let startDate = Date(timeIntervalSince1970: 0) // 1.1.1970
+
 let currentDate = Date()
+
 let timeInterval = currentDate.timeIntervalSince(startDate)
+
 let birthDay = Date(timeIntervalSince1970: timeInterval)
 
 
